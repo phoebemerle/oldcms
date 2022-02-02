@@ -1,0 +1,849 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+td a{
+  color:#000000 !important;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  background-color: #f4f6f9;
+
+}
+
+body {
+  font-size: 1.4rem;
+  overflow: scroll;
+}
+
+.error-message {
+  color: red;
+}
+
+.dropdown-list {
+  position: absolute;
+  background-color: #fff;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.dropdown-list li:hover {
+  background-color: grey;
+}
+
+input, button, textarea {
+  border: 0;
+  outline: none;
+  padding: .5rem .6rem;
+  border-radius: .2rem;
+  font-size: 1.4rem;
+}
+
+button {
+  background-color: $color-btn-bgr;
+  color: $color-btn-text;
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+}
+
+a, a:link, a:visited {
+  color: $color-link;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.content-wrapper, .main-footer, .main-header, .app__main, .app__login{
+  width:100%;
+}
+
+.burgerContainer{
+  display:none;
+}
+
+.homeView .virtual-scroller{
+  height:50rem;
+}
+
+.col-sm-12.col-md-12.dataTables_filter.searchBar{
+  padding-left:0;
+  padding-right:0;
+}
+
+.noSearchResults{
+  text-align: center;
+  font-size: 2.0rem;
+  color: $error-background;
+  font-weight: bold;
+}
+
+.searchBar {
+
+  label {
+    font-size: 1.6rem;
+  }
+
+  input {
+    font-size: 1.6rem;
+    width:90%;
+    display: inline-block;
+  }
+}
+
+.modalContainer{
+  z-index: 999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.closeModal{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  &::before {
+    font-family: FontAwesome;
+    content: "\f00d";
+    font-size: 2.5rem;
+    color: $color-black;
+  }
+  &:active {
+    opacity: .8;
+  }
+}
+
+.areYouSure{
+  color:red;
+}
+
+.list-table{
+  flex:1;
+  position:relative;
+
+    table{
+      width: 100%;
+      table-layout: fixed;
+      background-color: rgba($color-white, .7);
+      font-size:1.4rem;
+      display: table;
+    }
+
+    th{
+      padding: 0 0.5rem;
+      position: -webkit-sticky;
+      position: sticky;
+      top: -1.1rem;
+      background-color: #FFFFFF;
+    }
+
+  &__head {
+    border-bottom: 0.1rem solid $border-color;
+    height: $table-header-height;
+  }
+
+  &__body{
+    overflow: auto;
+    padding: 1.0rem;
+    background: white;
+  }
+
+  .noResults{
+    font-size:1.6rem;
+    color:$error-background;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  &__item{
+    height: 3.5rem;
+
+      a{
+        color:#212529;
+      }
+
+      td{
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding:0.5rem;
+    }
+  }
+}
+.table-list-col-edit::before{
+  font-family: FontAwesome;
+  content: "\f044";
+}
+
+.item-container{
+  height:unset !important;
+}
+
+.details-form{
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  font-size: 1.4rem;
+
+  button{
+    font-size:1.3rem;
+  }
+
+  &__body {
+    overflow: auto;
+
+    div{
+      margin: 1rem 0;
+    }
+
+    input, textarea{
+      border-radius:0.5rem;
+      border: 0.1rem solid $border-color;
+      width:40rem;
+    }
+
+    label{
+      margin-right:.5rem;
+      min-width:10%;
+      vertical-align: top;
+    }
+  }
+}
+
+.form-sections{
+  margin-bottom:1rem;
+  padding:1rem;
+  border-bottom:0.1rem solid $border-color;
+}
+
+.btn-primary:disabled{
+  cursor:not-allowed;
+}
+
+.createButton{
+  font-size:1.2rem;
+}
+
+.table_remove {
+
+  cursor: pointer;
+
+  &::before {
+    content: "\f056";
+    width: 3rem;
+    display: inline-block;
+    font-family: FontAwesome;
+    text-align: center;
+    color: $error-background;
+  }
+}
+
+.prices{
+  &__section{
+    display:inline-block;
+
+    span{
+      background-color:#c9c9c9;
+      margin-right:-0.8rem;
+      padding: .7rem;
+      border-radius: 0.5rem;
+      border: 0.1rem solid $border-color;
+    }
+
+    input{
+      border-top:0.1rem solid $border-color;
+      border-right:0.1rem solid $border-color;
+      border-bottom:0.1rem solid $border-color;
+    }
+  }
+}
+
+.overviewTabs {
+  ul {
+    margin-bottom: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0;
+    padding: 1.2rem;
+    border-left: 0.1rem solid $border-color;
+    border-right: 0.1rem solid $border-color;
+    border-top: 0.1rem solid $border-color;
+    cursor: pointer;
+    border-radius: 0.5rem 0.8rem 0 0;
+    background-color: #ffffff;
+    font-size: 1.5rem;
+  }
+}
+
+  .activeTab {
+    border-left: 0.2rem solid $border-color !important;
+    border-right: 0.2rem solid $border-color !important;
+    border-top: 0.2rem solid $border-color !important;
+    color: #ff6434;
+    font-weight: bold;
+  }
+
+  .princeInputSymbol {
+    background-color: #c9c9c9;
+    margin-right: -0.8rem;
+    padding: .7rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid $border-color;
+  }
+
+  .attached__section {
+    padding: 0 1rem 1rem;
+    margin-top: 1.5rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    border: 0.1rem solid $border-color;
+  }
+
+  .attached_container {
+    margin-top: 1rem;
+
+    button{
+      font-size:1.4rem;
+    }
+  }
+
+  .noAttachmentsFound td {
+    border-top: none;
+  }
+
+  .noAttachmentsFound span {
+    font-weight: bold;
+    color: $error-background;
+  }
+
+  .attachedProductTable{
+    tr{
+      margin-bottom:0.5rem;
+    }
+  }
+
+  .attachedTable{
+    padding: 0 1rem 1rem;
+    margin-top: 1.5rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    border: 0.1rem solid $border-color;
+    overflow-y: scroll;
+    font-size: 1.4rem;
+    display: block;
+
+    tr{
+      width: 100%;
+      display: inline-block;
+    }
+    th, td{
+      display: inline-block;
+      overflow:hidden;
+    }
+  }
+
+  .attachedTableView::before{
+    //content: "\f002";
+    width: 3rem;
+    display: inline-block;
+    //font-family: FontAwesome;
+    text-align:center;
+    color: #000000;
+    cursor:pointer;
+  }
+
+  .attachedTableRemove{
+    cursor:pointer;
+  }
+
+  .attachedTableRemove::before{
+    //content: "\f056";
+    width: 3rem;
+    display: inline-block;
+    //font-family: FontAwesome;
+    text-align:center;
+    color: $error-background;
+  }
+
+.attachedTableSet::before{
+  content: "\f013";
+  width: 3rem;
+  display: inline-block;
+  font-family: FontAwesome;
+  text-align:center;
+  color: #000000;
+  cursor:pointer;
+}
+
+  .attachedTableUpdate::before{
+    content: "\f0c7";
+    width: 3rem;
+    display: inline-block;
+    font-family: FontAwesome;
+    text-align:center;
+    color: #3aa42c;
+    cursor:pointer;
+  }
+
+  .attachedTableEdit::before{
+    content: "\f044";
+    width: 3rem;
+    display: inline-block;
+    font-family: FontAwesome;
+    text-align:center;
+    color: #3aa42c;
+    cursor:pointer;
+  }
+
+  .searchInput{
+    border-radius: 0.5rem;
+    border: 0.1rem solid $border-color;
+    width: 40rem;
+  }
+
+  .search-container{
+    margin-top:1rem;
+
+    &__section{
+      padding: 0 1rem 1rem;
+      margin-top: 1.5rem;
+      border-radius: 0.5rem;
+      width: 100%;
+      border: 0.1rem solid $border-color;
+    }
+
+    &__table{
+      overflow-y: scroll;
+      width: 100%;
+      font-size: 1.4rem;
+      height: 30rem;
+      display: block;
+
+      tr{
+        width: 100%;
+        display: inline-block;
+
+      }
+
+      th,td{
+        display:inline-block;
+        overflow:hidden;
+      }
+
+      &__add{
+        cursor: pointer;
+      }
+
+      &__add::before{
+        content: "\f055";
+        width: 3rem;
+        display: inline-block;
+        font-family: FontAwesome;
+        text-align:center;
+        color: #4ca43e;
+        cursor:pointer;
+      }
+
+
+      &__remove{
+        cursor: pointer;
+      }
+
+      &__remove::before{
+        content: "\f056";
+        width: 3rem;
+        display: inline-block;
+        font-family: FontAwesome;
+        text-align:center;
+        color: #FF2424;
+        cursor:pointer;
+      }
+
+      &__heading{
+
+        &__code{
+          width:20%;
+        }
+
+        &__desc{
+          width:40%
+        }
+
+        &__type{
+          width:20%;
+        }
+
+        &__supplierName{
+          width:80%;
+        }
+
+        &__title{
+          width:20%;
+        }
+
+        &__overview{
+          width:45%;
+        }
+
+        &__price{
+          width:15%;
+          padding-left:20px;
+        }
+      }
+
+      &__data{
+        &__code{
+          width:20%;
+        }
+        &__desc{
+          width:40%
+        }
+        &__type{
+          width:20%;
+        }
+        &__supplierName{
+          width:50%;
+        }
+        &__title{
+          width:20%;
+        }
+        &__overview{
+          width:40%;
+          overflow:hidden;
+          padding-right: 30px;
+        }
+
+        &__price{
+          width:15%;
+          text-align: center;
+      }
+
+      }
+
+    }
+  }
+
+  .princeInputSymbol{
+    background-color: $border-color;
+    margin-right: -0.8rem;
+    padding: .7rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid $border-color;
+  }
+
+  .attached{
+    &__section{
+      padding: 0 1rem 1rem;
+      margin-top:1.5rem;
+      border-radius:0.5rem;
+      width:100%;
+      border:0.1rem solid $border-color
+    }
+
+    &__container{
+      margin-top:1rem;
+    }
+  }
+
+  .noAttachmentsFound{
+    td{
+      border-top:none;
+    }
+
+    span{
+      font-weight:bold;
+      color:$error-background;
+    }
+  }
+
+  .listTableEditAction{
+    text-align:center
+  }
+
+.successfulMessage{
+  background-color: $success-background;
+}
+
+.errorMessage{
+  background-color: $error-background;
+}
+
+.imageInfoInput{
+  font-size:1.4rem;
+  margin: 1rem 0;
+}
+
+.imageInfoInput label{
+  width:80%;
+}
+
+.imageInfoInput input{
+  border: 0.1rem solid $border-color;
+  border-radius: 0.5rem;
+  width:80%;
+}
+
+.mediaInputSection{
+  font-size:1.4rem;
+  margin: 0 1.5rem 1rem 0;
+  display:inline-block;
+
+  input{
+    border:0.1rem solid $border-color;
+    border-radius:0.5rem;
+    width:30rem;
+  }
+
+  button{
+    font-size:1.4rem;
+  }
+}
+
+
+.attachedImageGallerySection{
+  text-align:center;
+
+  .attachedImageGalleryHolder{
+    height:17rem;
+    width:17rem;
+    text-align: center;
+    border: 1px solid $border-color;
+
+    img{
+      max-width:15rem;
+      max-height:15rem;
+    }
+  }
+
+  .attachedImageGalleryInfo{
+    margin:0.5rem 0;
+
+    .btn-danger{
+        margin-left:1rem;
+    }
+  }
+
+  input[type=checkbox]{
+    width:1.5rem;
+    height:1.5rem;
+    margin:0.5rem;
+
+  }
+
+  label{
+    font-size:1.4rem;
+  }
+
+}
+
+.nav-sidebar .menu-open > .nav-treeview{
+  padding: 0 15px;
+}
+
+.fileUpload{
+  font-size:1.3rem;
+  margin-bottom: 1rem;
+  padding:0;
+}
+
+.uploadButton{
+  font-size:1.4rem;
+  margin-top:2rem
+}
+
+.sourceFilter{
+  font-size:16px;
+  padding:10px 0;
+}
+
+.main-sections{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    padding: 1rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  &__editForm{
+
+    overflow-x: scroll;
+
+    &__container{
+      border: 1px solid #c9c9c9;
+      border-radius: 0 5px 5px 5px;
+      padding: 10px 20px;
+      background-color: white;
+    }
+  }
+}
+
+.vdatetime{
+
+  display:inline-block;
+  margin:0 !important;
+
+  div{
+    margin:0;
+  }
+
+}
+
+.addedBorder{
+  border: 1px solid #c9c9c9;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.smallerInput {
+  width:300px !important;
+}
+
+.inlineFormElements{
+  display: inline-block;
+  margin-right:20px !important;
+}
+
+
+.inputOrderBox{
+  width:50px !important;
+}
+
+.tempImage {
+  height: 150px;
+  width: 150px;
+  display: inline-block;
+}
+
+.imageSection{
+
+  margin-top:15px;
+
+  &__Info{
+
+    &__Image{
+      display:inline-block;
+      margin-right:50px;
+
+      img{
+        width:150px;
+        height:150px;
+      }
+    }
+
+    &__NoImage{
+      border:4px dotted #666666;
+      width:150px;
+      height:150px;
+      text-align:center;
+      position:relative;
+
+      div{
+        position: absolute;
+        top: 55px;
+        left: 30px;
+        font-size:20px;
+      }
+    }
+
+    &__Details{
+      display:inline-block;
+
+      input[type="text"]{
+        border:1px solid #c9c9c9;
+        border-radius: 5px;
+        width:300px;
+        font-size:14px;
+      }
+
+      div{
+        margin:10px 0;
+      }
+
+      label{
+        font-size:16px;
+        width:60px;
+      }
+
+    }
+
+  }
+
+  &__Buttons{
+    margin:10px 0;
+  }
+
+}
+
+.mce-statusbar{
+  display:none !important;
+}
+
+.mce-tinymce div{
+  margin:0;
+}
+
+div.mce-edit-area{
+  height:400px;
+
+  iframe{
+    height:400px !important;
+  }
+}
+
+#productShortDesc_ifr, div#mceu_35{
+  max-height:90px;
+}
+
+.search-filter{
+  padding: 5px 0 !important;
+  font-size: 1.4rem;
+
+  div{
+    display:inline-block;
+    padding:0 10px 0 0;
+  }
+
+}
+
+div#mceu_16 {
+  min-height:500px
+}
+
+i.fas.fa-eye {
+  color: black;
+}
+
+i.fas.fa-trash {
+  color: red;
+}
+
+.attributeCheckboxTD{
+  text-align: center;
+}

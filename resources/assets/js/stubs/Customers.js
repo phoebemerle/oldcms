@@ -1,0 +1,36 @@
+export default {
+    attributes: {
+        AccountNumber:"",
+        Company:"",
+        ContactName:"",
+        Email:"",
+        Fax:'',
+        FirstName:"",
+        PrimaryUser:0,
+        Surname:"",
+        Telephone:"",
+        TelephoneArea:"",
+        TelephoneCountry:"",
+        TelephoneMobile:'',
+        Title:"",
+        customerinformation:{
+            CountryCode:"",
+            CreditLimit:'',
+            CurrencyCode:"£",
+            CurrentBalance:'',
+            DataPoints:'',
+            OnHold:'',
+            TermsAgreed:'',
+            TermsConfirmation:'',
+            customer_details_id:'',
+            id:1
+        },
+    deliveryaddresses:[],
+    gdpr_opted:0,
+    gdpr_token:'',
+    invoiceaddresses:[],
+    job_title:'',
+    marketing_preferences:''
+    },
+    type:"customer-details"
+}

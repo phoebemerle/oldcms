@@ -1,0 +1,34 @@
+@import "~#/variables";
+
+@mixin vertical-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button-when-pressed() {
+  &:active {
+    box-shadow: inset 0 1rem 1rem -1rem rgba(0,0,0,1);
+  }
+}
+
+@mixin is-overlay() {
+  z-index:999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+  @include vertical-center;
+
+  form {
+    width: 60%;
+    height: 85%;
+    background-color: $color-white;
+    border-radius: .7rem;
+    color: $color-black;
+    overflow: hidden
+  }
+
+}
